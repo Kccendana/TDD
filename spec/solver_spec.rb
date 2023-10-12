@@ -29,7 +29,7 @@ describe Solver do
   end
 
   describe '#fizzbuzz' do
-    solve = Solver.new
+    Solver.new
     it 'returns fizz if N is divisible by 3' do
       expect(solver.fizzbuzz(3)).to eql 'fizz'
     end
