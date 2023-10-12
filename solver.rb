@@ -1,11 +1,10 @@
 class Solver
   def factorial(number)
-    result = 1
-    while number > 1
-      result *= number
-      number -= 1
-    end
-    result
+    raise ArgumentError, 'Input must be 0 or a positive integer' if number.negative?
+
+    return 1 if number.zero?
+
+    (1..number).reduce(:*)
   end
 
   def reverse(word)
